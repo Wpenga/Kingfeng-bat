@@ -6,7 +6,7 @@ EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["./backend/KingFeng/KingFeng.csproj", "KingFeng/"]
+COPY ["KingFeng/KingFeng.csproj", "KingFeng/"]
 RUN dotnet restore "KingFeng/KingFeng.csproj"
 COPY . .
 WORKDIR "/src/KingFeng"
